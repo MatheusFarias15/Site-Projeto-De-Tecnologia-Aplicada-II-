@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --cor-primaria: #000000; 
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD; 
+    
+    --fonte-principal: 'Krona One', sans-serif;
+    --fonte-secundaria: Georgia, 'Times New Roman', Times, serif;
+    --fonte-terciaria: 'Montserrat', sans-serif;
+    --fonte-quarta: 'Times New Roman', Times, serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-terciaria);
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.cabecalho{
+    padding: 2% 0 0 15%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px; 
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+    color: var(--cor-terciaria); 
+    text-decoration: none;
+}
+
+.apresentacao {
+    padding: 3.5% 15%;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    gap: 20px; 
+    flex-direction: column;
+}
+
+.image img {
+    max-width: 100%;
+    height: 370px;
+    display: flex;
+    flex-direction: row;
+}
+
+.apresentacao__conteudo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2rem;
+    font-family: var(--fonte-principal);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.25rem;
+    font-family: var(--fonte-terciaria);
+    padding-top: 15px;
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.apresentacao__links :hover {
+    background-color: darkblue;
+    border-radius: 12px;
+    border-style: outset;
+    text-shadow: 3px 3px 3px gold; 
+    box-shadow: 5px 5px 5px orangered;
+}
+
+.apresentacao__links__subtitulo{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.apresentacao__links__link{
+    display: flex; 
+    justify-content: center;
+    gap: 16px; 
+    border: 2px solid var(--cor-terciaria);
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-terciaria);
+}
+
+.apresentacao__imagem{
+    width: 100%;
+    max-width: 600px;
+}
+
+.rodape{
+    color: var(--cor-primaria); 
+    background-color: var(--cor-terciaria);
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--fonte-quarta);
+}
+
+/* Pagina Curriculo */
+
+.apresentacao__curriculo {
+    padding: 3.5% 15%;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    gap: 20px; 
+    flex-direction: column;
+}
+
+.apresentacao__curriculo__conteudo {
+    max-width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.apresentacao__curriculo__titulo{
+    font-size: 2rem;
+    font-family: var(--fonte-principal);
+}
+
+.apresentacao__curriculo__texto {
+    font-size: 1.25rem;
+    font-family: var(--fonte-terciaria);
+    padding-top: 15px;
+}
+
+.apresentacao__curriculo__softskills{
+    font-size: 1rem;
+    font-family: var(--fonte-quarta);
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+
+/* Pagina projetos  */
+
+.imagem-bomba{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.apresentacao__projeto__objetivo{
+    font-family: var(--fonte-quarta);
+    font-size: 1rem;
+}
+
+video {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.apresentacao__projeto__imagem {
+    margin: 0 auto;
+    width: 100%; 
+    max-width: 400px;
+}
+
+.card-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 100%;
+    max-width:500px;
+    height: 450px; 
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;  
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card .layer{
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+.card .info{
+    position: absolute;
+    bottom: -50%;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.5s bottom, 1.75s opacity;  
+}
+.info p{
+    font-size: 0.875rem;
+    margin-top: 3px;
+}
+.info button {
+    background: #490ccc;
+    border: none; 
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+.card:hover, 
+.card:hover img, 
+.card:hover layer {
+    transform: scale(1.1);
+}
+.card:hover > .layer {
+     opacity: 1;
+}
+.card:hover > .info{
+    bottom: 0;
+    opacity: 1;
+}
+.card-group:hover > .card:not(:hover){
+    filter: blur(5px);
+}
+
+/* 🔹 Notebook e Tablets (Até 1200px) */
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 3% 5%;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagem-bomba {
+        max-width: 400px;
+    }
+
+    .card-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* 🔹 Celulares (Até 800px) */
+@media (max-width: 800px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        padding: 8%;
+    }
+
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 1.5rem;
+    }
+
+    .imagem-bomba {
+        width: 100%;
+    }
+
+    .card-group {
+        flex-direction: column;
+    }
+}
+
+/* 🔹 Celulares Pequenos (Até 480px) */
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .apresentacao {
+        padding: 3%;
+    }
+
+    .cabecalho__menu {
+        gap: 10px;
+    }
+
+    .imagem-bomba {
+        width: 90%;
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: 1.2rem;
+    }
+}
