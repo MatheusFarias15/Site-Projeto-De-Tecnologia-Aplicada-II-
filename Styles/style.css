@@ -263,54 +263,192 @@ video {
 
 /* 🔹 Notebook e Tablets (Até 1200px) */
 @media (max-width: 1200px) {
-    .cabecalho {
-        padding: 3% 5%;
-    }
-
-    .apresentacao {
-        flex-direction: column;
+    .cabecalho{
+        display: flex;
+        padding: 1em;
         text-align: center;
     }
 
-    .imagem-bomba {
-        max-width: 400px;
+    .cabecalho__menu{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+    }
+    .cabecalho__menu__link{
+        font-size: 2rem;
+        text-align: center;
     }
 
-    .card-group {
-        flex-wrap: wrap;
-        justify-content: center;
+    .apresentacao{
+        padding: 1em;
+        text-wrap: stable;
+    }
+
+    .apresentacao__conteudo{
+        padding: 0.5em;
+    }
+
+    .apresentacao__conteudo__titulo{
+        padding: 1rem;
+        text-align: justify;
+        hyphens: auto;
+    }
+    .imagem-bomba{
+        width: 100%; 
+        max-width: 800px; 
+        height: auto; 
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    } 
+    .apresentacao__conteudo__texto{
+        padding: 1rem;
+        text-align: justify;
+        hyphens: auto;
+        max-width: 100%;
+        width: auto;
+    }
+
+    .apresentacao__curriculo{
+        padding: 1em;
+        text-wrap: stable;
+    }
+    .apresentacao__curriculo__titulo{
+        font-size: 1.7rem;
+        padding: 1rem;
+    }
+
+    .apresentacao__curriculo__texto{
+        padding: 1rem;
+        text-align: justify;
+        hyphens: auto;
+        max-width: 100%;
+        width: auto;
+    }
+    .apresentacao__projeto__objetivo{
+        padding: 1rem;
+        font-size: 1.6rem;
+        text-align: justify;
+    }
+    .apresentacao__curriculo__softskills{
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        font-size: 1.6rem;
+        text-align: justify;
+        text-decoration: none;    
+    }
+    .card-group{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        flex-wrap: wrap; 
+        gap: 20px; 
+        width: 100%; 
+    }
+    .card{
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .card img {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        margin: 1rem
+    }
+    .layer{
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .info{
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        font-size: 0.625rem;
     }
 }
 
 /* 🔹 Celulares (Até 800px) */
 @media (max-width: 800px) {
-    .cabecalho {
-        flex-direction: column;
-        align-items: center;
-        padding: 8%;
-    }
-
-    .cabecalho__menu {
-        flex-direction: column;
-        gap: 15px;
+    
+    .cabecalho{
+        display: flex;
+        padding: 1em;
         text-align: center;
     }
 
-    .apresentacao {
-        flex-direction: column-reverse;
-        padding: 5%;
-    }
-
-    .apresentacao__conteudo__titulo {
-        font-size: 1.5rem;
-    }
-
-    .imagem-bomba {
+    .cabecalho__menu{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
         width: 100%;
     }
+    .cabecalho__menu__link{
+        font-size: 2rem;
+        text-align: center;
+    }
 
-    .card-group {
-        flex-direction: column;
+    .apresentacao{
+        padding: 1em;
+        text-wrap: stable;
+    }
+
+    .apresentacao__conteudo{
+        padding: 0.5em;
+    }
+
+    .apresentacao__conteudo__titulo{
+        padding: 1rem;
+        text-align: justify;
+        hyphens: auto;
+    }
+    .imagem-bomba{
+        width: 100%; 
+        max-width: 800px; 
+        height: auto; 
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    } 
+    .apresentacao__conteudo__texto{
+        padding: 1rem;
+        text-align: justify;
+        hyphens: auto;
+        max-width: 100%;
+        width: auto;
+    }
+
+    .apresentacao__curriculo{
+        padding: 1em;
+        text-wrap: stable;
+    }
+    .apresentacao__curriculo__titulo{
+        font-size: 1.7rem;
+        padding: 1rem;
+    }
+
+    .apresentacao__curriculo__texto{
+        padding: 1rem;
+        text-align: justify;
+        hyphens: auto;
+        max-width: 100%;
+        width: auto;
+    }
+    .apresentacao__projeto__objetivo{
+        padding: 1rem;
+        font-size: 1.6rem;
+        text-align: justify;
+    }
+    .apresentacao__curriculo__softskills{
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        font-size: 1.6rem;
+        text-align: justify;
+        text-decoration: none;    
+    }
+    .card{
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .card img {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        margin: 1rem
+    }
+    .layer{
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .info{
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        font-size: 0.625rem;
     }
 }
 
@@ -388,7 +526,6 @@ video {
     }
     .card img {
         padding: 0.5rem 1rem 0.5rem 1rem;
-        
     }
     .layer{
         padding: 0.5rem 1rem 0.5rem 1rem;
